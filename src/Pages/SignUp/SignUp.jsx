@@ -1,9 +1,11 @@
+import { Link, useNavigate } from "react-router-dom";
 import SocialButtons from "../../Components/uI/SocialButtons";
 import Auth from "../../Contexts/Auth";
 
 export default function SignUp() {
-    const { user, google, github, successMsg, errorMsg, createUser } = Auth()
-    console.log(user.email)
+    const {google, github, successMsg, errorMsg, createUser } = Auth()
+    const navigate  =  useNavigate();
+
 
     // const sign up with google
     const onGoogle = () => {
@@ -12,6 +14,7 @@ export default function SignUp() {
                 const user = result.user;
                 console.log(user)
                 successMsg('Sign up successfully')
+                navigate('/')
             })
             .catch(error => errorMsg(error.massage))
     }
@@ -23,6 +26,7 @@ export default function SignUp() {
                 const user = result.user;
                 console.log(user)
                 successMsg('Sign up successfully')
+                navigate('/')
             })
             .catch(error => errorMsg(error.massage))
     }
@@ -41,6 +45,7 @@ export default function SignUp() {
                 const user = result.user;
                 console.log(user)
                 successMsg('Sign up successfully')
+                navigate('/signIn')
             })
             .catch(error => errorMsg(error.massage))
 
@@ -79,9 +84,10 @@ export default function SignUp() {
                         
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn btn-primary" type="submit">Login</button>
+                        <button className="btn btn-primary" type="submit">Sign Up</button>
                     </div>
                 </form>
+                <p>Don not have any account? <Link className="text-btnPrimary" to={"/signIn"}>sign In</Link></p>
             </div>
             <div className="flex flex-col justify-center items-center">
                 <SocialButtons handler={onGoogle} text={'Sign up with google'} />

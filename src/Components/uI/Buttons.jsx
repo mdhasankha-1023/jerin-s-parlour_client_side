@@ -1,7 +1,7 @@
 
 // eslint-disable-next-line react/prop-types
-export default function Buttons({value}) {
+export default function Buttons({value, handler}) {
   return (
-        <button className="btn bg-btnPrimary text-[#FFF] px-8">{value}</button>
+        <button onClick={handler} className="btn bg-btnPrimary text-[#FFF] px-8">{value}</button>
   )
 }

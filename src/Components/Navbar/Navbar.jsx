@@ -1,16 +1,29 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Buttons from "../uI/Buttons";
+import Auth from "../../Contexts/Auth";
 
 
 export default function Navbar() {
+  const { user, logOut, successMsg, errorMsg } = Auth();
+  const navigate = useNavigate()
 
 
+  const handleLogOutBtn = () =>{
+    logOut()
+    .then(res => {
+      console.log(res)
+      successMsg('Sign out successfully')
+      navigate('/signIn')
+    })
+    .catch(error => errorMsg(error.massage))
+  }
 
   const navLink = (
     <>
       <li><Link>Home</Link></li>
       <li><Link>Our teme</Link></li>
       <li><Link>Contact us</Link></li>
+      <li><Link to={'/user-dashBoard'}>Dashboard</Link></li>
     </>
 
   )
@@ -33,7 +46,7 @@ export default function Navbar() {
         <Link to={'/'} className="btn btn-ghost text-xl">Jerin&rsquo;s parlour</Link>
       </div>
 
-    {/* large device */}
+      {/* large device */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           {navLink}
@@ -42,8 +55,13 @@ export default function Navbar() {
 
       {/* button */}
       <div className="navbar-end flex gap-8">
-        <Buttons value={'Sign in'} />
-        <Buttons value={'Sign up'} />
+        {user ? <Buttons handler={handleLogOutBtn} value={'Sing out'} />
+          :
+          <>
+            <Buttons value={'Sign in'} />
+            <Buttons value={'Sign up'} />
+          </>}
+
       </div>
     </div>
   )

@@ -1,5 +1,5 @@
   import { createContext, useEffect, useState } from "react";
-  import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithPopup } from "firebase/auth";
+  import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
   import app from "../Firebase/firebase.config";
 import Swal from "sweetalert2";
 
@@ -51,8 +51,14 @@ import Swal from "sweetalert2";
 
   // create user with email and password
   const createUser = (email, password)=> {
-    // setLoading(true)
+    setLoading(true)
     return createUserWithEmailAndPassword(auth, email, password)
+  }
+
+  // create user with email and password
+  const signIn = (email, password)=> {
+    setLoading(true)
+    return signInWithEmailAndPassword(auth, email, password)
   }
     
   // hold user data
@@ -66,10 +72,15 @@ import Swal from "sweetalert2";
     }
   } , [])
 
+  // sing out
+  const logOut = () => {
+    return signOut(auth)
+  }
+
   //   data
   const data = {
       user,
-      google, github, createUser,
+      google, github, createUser, logOut, signIn,
       loading,
       successMsg, errorMsg,
   }
