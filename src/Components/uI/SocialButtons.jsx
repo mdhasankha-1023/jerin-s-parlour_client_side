@@ -1,8 +1,9 @@
 
 // eslint-disable-next-line react/prop-types
-export default function SocialButtons({text, logo}) {
+export default function SocialButtons({text, icon}) {
   return (
     <button className="btn btn-outline">
-        {logo}{text}</button>
+        <img src={icon} alt="google" />
+        {text}</button>
   )
 }
