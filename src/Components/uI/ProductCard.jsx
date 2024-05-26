@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import Buttons from "./Buttons";
 
 // eslint-disable-next-line react/prop-types
 export default function ProductCard({product}) {
@@ -12,7 +14,9 @@ export default function ProductCard({product}) {
                 <p>{proDetails}</p>
                 <p>{price}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <Link to={'/product-details'}>
+                    <Buttons value={'Details'}/>
+                    </Link>
                 </div>
             </div>
         </div>
