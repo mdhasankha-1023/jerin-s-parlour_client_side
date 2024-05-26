@@ -1,5 +1,17 @@
+import { Link } from "react-router-dom"
 
 export default function Footer() {
+
+  const footerLink = (
+    <>
+      <Link>Home</Link>
+      <Link>Our teme</Link>
+      <Link>Contact us</Link>
+    </>
+
+  )
+
+
   return (
     <footer className="footer p-10 bg-primaryBg text-[#FFF]">
       <aside>
@@ -10,19 +22,13 @@ export default function Footer() {
       {/* first */}
       <nav>
         <h6 className="footer-title">Services</h6>
-        <a className="link link-hover">Branding</a>
-        <a className="link link-hover">Design</a>
-        <a className="link link-hover">Marketing</a>
-        <a className="link link-hover">Advertisement</a>
+        {footerLink}
       </nav>
 
       {/* second */}
       <nav>
         <h6 className="footer-title">Company</h6>
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Jobs</a>
-        <a className="link link-hover">Press kit</a>
+        {footerLink}
       </nav>
 
       {/* Third */}
