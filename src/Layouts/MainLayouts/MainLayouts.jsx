@@ -1,6 +1,9 @@
+import Navbar from "../../Components/Navbar/Navbar";
 
 export default function MainLayouts() {
   return (
-    <div>MainLayouts</div>
+    <div>
+      <Navbar/>
+    </div>
   )
 }
