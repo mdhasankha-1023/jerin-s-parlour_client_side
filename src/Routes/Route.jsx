@@ -5,11 +5,18 @@ import MainLayouts from "../Layouts/MainLayouts/MainLayouts";
 import SignUp from "../Pages/SignUp/SignUp";
 import SignIn from "../Pages/SignIn/SignIn";
 import DashBoardLayout from "../Layouts/DashBoardLayout/DashBoardLayout";
+import Main from "../Pages/Main/Main";
 
 export const router = createBrowserRouter([
     {
       path: "/",
-      element: <MainLayouts/>
+      element: <MainLayouts/>,
+      children:[
+        {
+          path: '/',
+          element: <Main/>
+        }
+      ]
     },
 
     // dashboard

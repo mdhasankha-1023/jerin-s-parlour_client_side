@@ -1,7 +1,10 @@
+import NewProducts from "../../Components/NewProducts/NewProducts";
 
 
 export default function Main() {
   return (
-    <div>Main</div>
+    <div>
+      <NewProducts></NewProducts>
+    </div>
   )
 }
