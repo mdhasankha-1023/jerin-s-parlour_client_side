@@ -1,5 +1,5 @@
-  import { createContext, useState } from "react";
-  import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+  import { createContext, useEffect, useState } from "react";
+  import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithPopup } from "firebase/auth";
   import app from "../Firebase/firebase.config";
 import Swal from "sweetalert2";
 
@@ -13,7 +13,7 @@ import Swal from "sweetalert2";
   // eslint-disable-next-line react/prop-types
   export default function AuthProvider({children}) {
     const [loading, setLoading] = useState(true);
-    const [user, setUser] =  useState('hasan')
+    const [user, setUser] =  useState({})
 
   //success msg 
   const successMsg = (text) => {
@@ -48,11 +48,28 @@ import Swal from "sweetalert2";
     setLoading(true)
   return signInWithPopup(auth, githubProvider)
   }
+
+  // create user with email and password
+  const createUser = (email, password)=> {
+    // setLoading(true)
+    return createUserWithEmailAndPassword(auth, email, password)
+  }
     
+  // hold user data
+  useEffect( ()=> {
+    const unSubscribe = onAuthStateChanged(auth, (currentUser)=> {
+      setLoading(false)
+      setUser(currentUser)
+    })
+    return () => {
+      return unSubscribe
+    }
+  } , [])
+
   //   data
   const data = {
       user,
-      google, github,
+      google, github, createUser,
       loading,
       successMsg, errorMsg,
   }

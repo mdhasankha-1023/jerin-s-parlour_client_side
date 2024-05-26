@@ -1,9 +1,9 @@
-import Form from "../../Form/Form";
+import SignInForm from "../../Form/SignInForm";
 
 export default function SignIn() {
   return (
     <div>
-        <Form type={'signIn'}/>
+      <SignInForm/>
     </div>
   )
 }
