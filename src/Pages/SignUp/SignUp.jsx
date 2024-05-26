@@ -3,8 +3,8 @@ import Auth from "../../Contexts/Auth";
 import Form from "../../Form/Form";
 
 export default function SignUp() {
-    const {user, google, github} = Auth()
-    console.log(user, google)
+    const {user, google, github, successMsg, errorMsg} = Auth()
+    console.log(user)
 
     // const sign up with google
     const onGoogle = () => {
@@ -12,8 +12,9 @@ export default function SignUp() {
         .then(result => {
             const user = result.user;
             console.log(user)
+            successMsg('Sign up successfully')
         })
-        .catch(error => console.log(error.massage))
+        .catch(error => errorMsg(error.massage))
     }
 
     // const sign up with google
@@ -22,8 +23,9 @@ export default function SignUp() {
         .then(result => {
             const user = result.user;
             console.log(user)
+            successMsg('Sign up successfully')
         })
-        .catch(error => console.log(error.massage))
+        .catch(error => errorMsg(error.massage))
     }
 
 
