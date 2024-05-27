@@ -10,6 +10,7 @@ import Products from "../Pages/NormalUserPages/Products";
 import ProductDetails from "../Pages/NormalUserPages/ProductDetails";
 import AddProducts from "../Pages/DashBoardPages/AddProducts";
 import AllProducts from "../Pages/DashBoardPages/AllProducts";
+import UpdateProducts from "../Pages/DashBoardPages/UpdateProducts";
 
 export const router = createBrowserRouter([
     {
@@ -44,7 +45,12 @@ export const router = createBrowserRouter([
         {
           path: '/user-dashBoard/all-products',
           element: <AllProducts/>
-        }
+        },
+        {
+          path: '/user-dashBoard/pro-update',
+          element: <UpdateProducts/>
+        },
+
       ]
     },
 
