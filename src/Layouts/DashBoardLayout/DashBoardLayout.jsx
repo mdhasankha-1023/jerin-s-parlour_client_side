@@ -3,7 +3,9 @@ import UserAvater from "../../Components/uI/UserAvater"
 import Auth from "../../Contexts/Auth"
 
 export default function DashBoardLayout() {
-    const { user } = Auth()
+    const { user } = Auth();
+
+    console.log(user)
 
     const dashBoardLink = (
         <>
