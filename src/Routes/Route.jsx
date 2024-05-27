@@ -6,8 +6,10 @@ import SignUp from "../Pages/SignUp/SignUp";
 import SignIn from "../Pages/SignIn/SignIn";
 import DashBoardLayout from "../Layouts/DashBoardLayout/DashBoardLayout";
 import Main from "../Pages/Main/Main";
-import AllProducts from "../Pages/NormalUserPages/AllProducts";
+import Products from "../Pages/NormalUserPages/Products";
 import ProductDetails from "../Pages/NormalUserPages/ProductDetails";
+import AddProducts from "../Pages/DashBoardPages/AddProducts";
+import AllProducts from "../Pages/DashBoardPages/AllProducts";
 
 export const router = createBrowserRouter([
     {
@@ -19,8 +21,8 @@ export const router = createBrowserRouter([
           element: <Main/>
         },
         {
-          path: '/all-products',
-          element: <AllProducts/>
+          path: '/products',
+          element: <Products/>
         },
         {
           path: '/product-details',
@@ -33,7 +35,17 @@ export const router = createBrowserRouter([
     // dashboard
     {
       path: "/user-dashBoard",
-      element:  <DashBoardLayout></DashBoardLayout>
+      element:  <DashBoardLayout></DashBoardLayout>,
+      children: [
+        {
+          path: '/user-dashBoard/add-product',
+          element: <AddProducts/>
+        },
+        {
+          path: '/user-dashBoard/all-products',
+          element: <AllProducts/>
+        }
+      ]
     },
 
     // sign-up page

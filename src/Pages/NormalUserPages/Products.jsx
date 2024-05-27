@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react"
 import ProductCard from "../../Components/uI/ProductCard"
-import { Link } from "react-router-dom"
-import Buttons from "../../Components/uI/Buttons"
 
-export default function AllProducts() {
+export default function Products() {
     const [products, setProducts] = useState([])
 
     console.log(products)
