@@ -1,10 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import SocialButtons from "../../Components/uI/SocialButtons";
 import Auth from "../../Contexts/Auth";
+import PrimaryTitle from "../../Components/uI/PrimaryTitle";
 
 export default function SignUp() {
-    const {google, github, successMsg, errorMsg, createUser } = Auth()
-    const navigate  =  useNavigate();
+    const { google, github, successMsg, errorMsg, createUser } = Auth()
+    const navigate = useNavigate();
 
 
     // const sign up with google
@@ -55,43 +56,44 @@ export default function SignUp() {
 
 
     return (
-        <div>
-            <div className='border-2 border-solid w-full max-w-md mx-auto py-[24px] px-[50px]'>
-                <form onSubmit={handleSubmit} className="card-body">
+        <div className='flex items-center justify-center h-screen'>
+            <div className='shadow-xl py-12 px-8 rounded'>
+                <PrimaryTitle text={'Sign Up'}/>
+                <form onSubmit={handleSubmit} className="card-body w-full p-0">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="text" placeholder="Name" 
-                        name="name"
-                        className="input input-bordered" required />
+                        <input type="text" placeholder="Name"
+                            name="name"
+                            className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="email" placeholder="Email" 
-                        name="email"
-                        className="input input-bordered" required />
+                        <input type="email" placeholder="Email"
+                            name="email"
+                            className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
-                        <input type="password" placeholder="password" 
-                        name={'password'}
-                        className="input input-bordered" required />
-                        
+                        <input type="password" placeholder="password"
+                            name={'password'}
+                            className="input input-bordered" required />
+
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn btn-primary" type="submit">Sign Up</button>
+                        <button className="btn bg-primaryBg text-[#fff]" type="submit">Sign Up</button>
                     </div>
                 </form>
-                <p>Don not have any account? <Link className="text-btnPrimary" to={"/signIn"}>sign In</Link></p>
-            </div>
-            <div className="flex flex-col justify-center items-center">
-                <SocialButtons handler={onGoogle} text={'Sign up with google'} />
-                <SocialButtons handler={onGithub} text={'Sign up with github'} />
+                <p className="my-4">Don not have any account? <Link className="text-btnPrimary" to={"/signIn"}>sign In</Link></p>
+                <div className="flex flex-col justify-center gap-4">
+                    <SocialButtons handler={onGoogle} icon={'google'} text={'Sign up with Google'} />
+                    <SocialButtons handler={onGithub} icon={'github'} text={'Sign up with Github'} />
+                </div>
             </div>
         </div>
     )

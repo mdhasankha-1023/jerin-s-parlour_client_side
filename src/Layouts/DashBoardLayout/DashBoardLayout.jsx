@@ -9,7 +9,7 @@ export default function DashBoardLayout() {
 
     const dashBoardLink = (
         <>
-            <li><Link>User Info</Link></li>
+            <li><Link to={'/user-dashBoard/user-info'}>User Info</Link></li>
             <li><Link to={'/user-dashBoard/all-products'}>All Products</Link></li>
             <li><Link to={'/user-dashBoard/add-product'}>Add Product</Link></li>
         </>
@@ -39,7 +39,7 @@ export default function DashBoardLayout() {
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-                    <UserAvater userName={user?.email} />
+                    <UserAvater userPhoto={user?.photoURL} userEmail={user?.email} />
                     <div className="divider"></div>
                     {/* Sidebar content here */}
                     {dashBoardLink}

@@ -12,6 +12,7 @@ import AddProducts from "../Pages/DashBoardPages/AddProducts";
 import AllProducts from "../Pages/DashBoardPages/AllProducts";
 import UpdateProducts from "../Pages/DashBoardPages/UpdateProducts";
 import PrivetRoute from "./PrivetRoute";
+import UserInfo from "../Pages/DashBoardPages/UserInfo";
 
 export const router = createBrowserRouter([
   {
@@ -57,6 +58,12 @@ export const router = createBrowserRouter([
         path: '/user-dashBoard/pro-update',
         element: <PrivetRoute>
           <UpdateProducts />
+        </PrivetRoute>
+      },
+      {
+        path: '/user-dashBoard/user-info',
+        element: <PrivetRoute>
+          <UserInfo/>
         </PrivetRoute>
       },
 

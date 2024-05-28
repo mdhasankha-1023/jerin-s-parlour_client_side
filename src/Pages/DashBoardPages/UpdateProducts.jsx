@@ -1,4 +1,5 @@
 import Buttons from "../../Components/uI/Buttons";
+import PrimaryTitle from "../../Components/uI/PrimaryTitle";
 import Auth from "../../Contexts/Auth";
 
 export default function UpdateProducts() {
@@ -34,7 +35,8 @@ export default function UpdateProducts() {
     }
     return (
         <div className="">
-            <div className='border-2 border-solid w-full max-w-md py-[24px] px-8'>
+            <div className='shadow-xl py-12 px-8 rounded'>
+                <PrimaryTitle text={'Update Product'} />
                 <form onSubmit={handleSubmit} className="card-body">
                     {/* 1st input row */}
                     <div className="flex justify-center items-center gap-4">

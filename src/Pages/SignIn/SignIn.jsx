@@ -1,9 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import Auth from "../../Contexts/Auth";
+import SocialButtons from "../../Components/uI/SocialButtons";
+import PrimaryTitle from "../../Components/uI/PrimaryTitle";
 
 
 export default function SignIn() {
-  const {signIn, successMsg, errorMsg} = Auth();
+  const { signIn, successMsg, errorMsg, google, github } = Auth();
   const navigate = useNavigate();
 
 
@@ -27,10 +29,37 @@ export default function SignIn() {
 
 
   }
+
+  // const sign up with google
+  const onGoogle = () => {
+    google()
+      .then(result => {
+        const user = result.user;
+        console.log(user)
+        successMsg('Sign up successfully')
+        navigate('/')
+      })
+      .catch(error => errorMsg(error.massage))
+  }
+
+  // const sign up with github
+  const onGithub = () => {
+    github()
+      .then(result => {
+        const user = result.user;
+        console.log(user)
+        successMsg('Sign up successfully')
+        navigate('/')
+      })
+      .catch(error => errorMsg(error.massage))
+  }
+
+
   return (
-    <div>
-      <div className='border-2 border-solid w-full max-w-md mx-auto py-[24px] px-[50px]'>
-        <form onSubmit={handleSubmit} className="card-body">
+    <div className="flex items-center justify-center h-screen">
+      <div className='shadow-xl py-12 px-8 rounded'>
+        <PrimaryTitle text={'Sign In'} />
+        <form onSubmit={handleSubmit} className="card-body w-full p-0">
           <div className="form-control">
             <label className="label">
               <span className="label-text">Email</span>
@@ -49,10 +78,14 @@ export default function SignIn() {
 
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary" type="submit">Sign In</button>
+            <button className="btn bg-primaryBg text-[#fff]" type="submit">Sign In</button>
           </div>
         </form>
-        <p>Don not have any account? <Link className="text-btnPrimary underline" to={"/signUp"}>sign Up</Link></p>
+        <p className="my-4">Don not have any account? <Link className="text-btnPrimary underline" to={"/signUp"}>sign Up</Link></p>
+        <div className="flex flex-col justify-center gap-4">
+          <SocialButtons handler={onGoogle} icon={'google'} text={'Continue with Google'} />
+          <SocialButtons handler={onGithub} icon={'github'} text={'Continue with Github'} />
+        </div>
       </div>
     </div>
   )

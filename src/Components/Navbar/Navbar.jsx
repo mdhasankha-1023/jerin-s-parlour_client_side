@@ -21,7 +21,7 @@ export default function Navbar() {
   const navLink = (
     <>
       <li><Link>Home</Link></li>
-      <li><Link to={'/all-products'}>All Products</Link></li>
+      <li><Link to={'/products'}>Products</Link></li>
       <li><Link>Contact us</Link></li>
       <li><Link to={'/user-dashBoard'}>Dashboard</Link></li>
     </>
