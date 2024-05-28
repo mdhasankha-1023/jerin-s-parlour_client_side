@@ -1,5 +1,6 @@
 import Banner from "../../Components/Banner/Banner";
 import NewProducts from "../../Components/NewProducts/NewProducts";
+import Status from "../../Components/Status/Status";
 
 
 export default function Main() {
@@ -7,6 +8,7 @@ export default function Main() {
     <div>
       <Banner></Banner>
       <NewProducts></NewProducts>
+      <Status/>
     </div>
   )
 }
