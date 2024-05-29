@@ -20,9 +20,11 @@ export default function Navbar() {
 
   const navLink = (
     <>
-      <li><Link>Home</Link></li>
-      <li><Link to={'/products'}>Products</Link></li>
-      <li><Link>Contact us</Link></li>
+      <li><Link to={'/'}>Home</Link></li>
+      <li><Link to={'/services'}>Services</Link></li>
+      <li><Link to={'/our-teams'}>Our teams</Link></li>
+      <li><Link to={'/contact-us'}>Contact us</Link></li>
+      <li><Link to={'/about'}>About</Link></li>
       <li><Link to={'/user-dashBoard'}>Dashboard</Link></li>
     </>
 

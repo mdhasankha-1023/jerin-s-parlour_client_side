@@ -1,5 +1,5 @@
 import Banner from "../../Components/Banner/Banner";
-import ContactUs from "../../Components/ContactUs/ContactUs";
+import ContactForm from "../../Components/ContactUs/ContactForm";
 import NewProducts from "../../Components/NewProducts/NewProducts";
 import Status from "../../Components/Status/Status";
 import Testimonials from "../../Components/Testimonials/Testimonials";
@@ -12,7 +12,7 @@ export default function Main() {
       <NewProducts></NewProducts>
       <Status/>
       <Testimonials/>
-      <ContactUs/>
+      <ContactForm/>
     </div>
   )
 }

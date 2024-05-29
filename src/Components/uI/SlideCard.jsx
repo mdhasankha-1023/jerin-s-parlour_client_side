@@ -16,7 +16,7 @@ export default function SlideCard({review}) {
                         <img src={userPic} />
                     </div>
                 </div>
-                <div className="flex flex-col gap-1 items-center justify-center">
+                <div className="flex flex-col gap-1 items-start justify-center">
                     <p className="text-xl font-bold">{userName}</p>
                     <p className="text-md">{profession}</p>
                 </div>

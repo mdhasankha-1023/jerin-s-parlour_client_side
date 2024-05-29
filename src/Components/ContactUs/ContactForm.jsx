@@ -1,7 +1,7 @@
 import Buttons from "../uI/Buttons";
 import PrimaryTitle from "../uI/PrimaryTitle";
 
-export default function ContactUs() {
+export default function ContactForm() {
   return (
     <div className="xl:w-4/5 mx-auto my-20 bg-secondaryBg">
       <PrimaryTitle text1={'Contact'} text2={'Us'} style={'text-center'} />

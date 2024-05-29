@@ -6,13 +6,16 @@ import SignUp from "../Pages/SignUp/SignUp";
 import SignIn from "../Pages/SignIn/SignIn";
 import DashBoardLayout from "../Layouts/DashBoardLayout/DashBoardLayout";
 import Main from "../Pages/Main/Main";
-import Products from "../Pages/NormalUserPages/Products";
+import Services from "../Pages/NormalUserPages/Services";
 import ProductDetails from "../Pages/NormalUserPages/ProductDetails";
 import AddProducts from "../Pages/DashBoardPages/AddProducts";
 import AllProducts from "../Pages/DashBoardPages/AllProducts";
 import UpdateProducts from "../Pages/DashBoardPages/UpdateProducts";
 import PrivetRoute from "./PrivetRoute";
 import UserInfo from "../Pages/DashBoardPages/UserInfo";
+import ContactUs from "../Pages/NormalUserPages/ContactUs";
+import About from "../Pages/NormalUserPages/About";
+import OurTeams from "../Pages/NormalUserPages/OurTeams";
 
 export const router = createBrowserRouter([
   {
@@ -24,12 +27,24 @@ export const router = createBrowserRouter([
         element: <Main />
       },
       {
-        path: '/products',
-        element: <Products />
+        path: '/services',
+        element: <Services />
       },
       {
         path: '/product-details',
         element: <ProductDetails />
+      },
+      {
+        path: '/contact-us',
+        element: <ContactUs/>
+      },
+      {
+        path: '/about',
+        element: <About/>
+      },
+      {
+        path: '/our-team',
+        element: <OurTeams/>
       },
 
     ]

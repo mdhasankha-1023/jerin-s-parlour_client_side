@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import ProductCard from "../../Components/uI/ProductCard"
 
-export default function Products() {
+export default function Services() {
   const [products, setProducts] = useState([])
 
   console.log(products)
