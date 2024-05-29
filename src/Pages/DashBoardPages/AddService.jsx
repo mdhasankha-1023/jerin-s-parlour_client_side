@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import Buttons from "../../Components/uI/Buttons";
 import PrimaryTitle from "../../Components/uI/PrimaryTitle";
 import Auth from "../../Contexts/Auth";
@@ -17,20 +18,32 @@ export default function AddService() {
         const info = { name, email, proName, price, proDetails, proPicture }
         console.log(info)
 
-        fetch('http://localhost:3000/products', {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify(info)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                successMsg('Product add successfully')
-                form.reset()
-            })
-            .catch(error => errorMsg(error.massage))
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won add this service!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, add it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch('http://localhost:3000/products', {
+                    method: 'POST',
+                    headers: {
+                        'Content-type': 'application/json'
+                    },
+                    body: JSON.stringify(info)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        successMsg('Product add successfully')
+                        form.reset()
+                    })
+                    .catch(error => errorMsg(error.massage))
+            }
+        });
 
     }
 
@@ -39,7 +52,7 @@ export default function AddService() {
     return (
         <div className="">
             <div className='shadow-xl py-12 px-8 rounded'>
-                <PrimaryTitle text={'Add Product'}/>
+                <PrimaryTitle text1={'Add'} text2={'Service'} style={'text-center'} />
                 <form onSubmit={handleSubmit} className="card-body">
                     {/* 1st input row */}
                     <div className="flex justify-center items-center gap-4">

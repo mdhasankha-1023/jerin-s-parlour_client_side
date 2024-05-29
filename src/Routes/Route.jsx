@@ -10,7 +10,7 @@ import Services from "../Pages/NormalUserPages/Services";
 import ProductDetails from "../Pages/NormalUserPages/ProductDetails";
 import AddService from "../Pages/DashBoardPages/AddService";
 import ManageServices from "../Pages/DashBoardPages/ManageServices";
-import UpdateProducts from "../Pages/DashBoardPages/UpdateProducts";
+import EditProducts from "../Pages/DashBoardPages/EditProducts";
 import PrivetRoute from "./PrivetRoute";
 import UserInfo from "../Pages/DashBoardPages/UserInfo";
 import ContactUs from "../Pages/NormalUserPages/ContactUs";
@@ -74,7 +74,7 @@ export const router = createBrowserRouter([
       {
         path: '/user-dashBoard/pro-update/:id',
         element: <PrivetRoute>
-          <UpdateProducts />
+          <EditProducts />
         </PrivetRoute>,
         loader: ({params}) => fetch(`http://localhost:3000/products/${params.id}`)
       },

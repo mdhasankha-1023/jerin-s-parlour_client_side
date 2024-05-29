@@ -2,8 +2,9 @@ import { useLoaderData } from "react-router-dom";
 import Buttons from "../../Components/uI/Buttons";
 import PrimaryTitle from "../../Components/uI/PrimaryTitle";
 import Auth from "../../Contexts/Auth";
+import Swal from "sweetalert2";
 
-export default function UpdateProducts() {
+export default function EditProducts() {
     const { user, successMsg, errorMsg } = Auth();
     const service = useLoaderData();
 
@@ -19,27 +20,38 @@ export default function UpdateProducts() {
         const info = { name, email, proName, price, proDetails, proPicture }
         console.log(info)
 
-        fetch(`http://localhost:3000/products/${service.id}`, {
-            method: 'PATCH',
-            headers: {
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify(info)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                successMsg('Product add successfully')
-                form.reset()
-            })
-            .catch(error => errorMsg(error.massage))
-
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won to be Update this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, update it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:3000/products/${service.id}`, {
+                    method: 'PATCH',
+                    headers: {
+                        'Content-type': 'application/json'
+                    },
+                    body: JSON.stringify(info)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        successMsg('Product add successfully')
+                        form.reset()
+                    })
+                    .catch(error => errorMsg(error.massage))
+            }
+        });
     }
 
     return (
         <div className="">
             <div className='shadow-xl py-12 px-8 rounded'>
-                <PrimaryTitle text1={'Update Your'} text2={'Service'} style={'text-center'} />
+                <PrimaryTitle text1={'Edit Your'} text2={'Service'} style={'text-center'} />
                 <form onSubmit={handleSubmit} className="card-body">
                     {/* 1st input row */}
                     <div className="flex justify-center items-center gap-4">
@@ -103,7 +115,7 @@ export default function UpdateProducts() {
                             </label>
                             <input type="text" placeholder="Picture Link"
                                 name={'proPicture'}
-                                className="input input-bordered" 
+                                className="input input-bordered"
                                 defaultValue={service.proPicture}
                                 required />
 
@@ -119,7 +131,7 @@ export default function UpdateProducts() {
                     </div>
                     {/* button */}
                     <div className="form-control mt-6">
-                        <Buttons type={'submit'} value={'Update'} />
+                        <Buttons type={'submit'} value={'Edit'} />
                     </div>
                 </form>
 
