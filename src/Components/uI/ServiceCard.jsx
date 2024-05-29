@@ -5,11 +5,11 @@ import { TrashIcon } from "@heroicons/react/16/solid";
 
 
 // eslint-disable-next-line react/prop-types
-export default function ServiceCard({ product, type }) {
+export default function ServiceCard({ product, type, handler }) {
+    const { user } = Auth();
     // eslint-disable-next-line react/prop-types
     const { proName, price, proDetails, proPicture, id } = product;
-    const { user } = Auth();
-    console.log(product)
+    // console.log(product)
 
     return (
         <div className="card w-full bg-base-100 shadow-xl">
@@ -27,7 +27,7 @@ export default function ServiceCard({ product, type }) {
                             <Link to={'/user-dashBoard/pro-update'}>
                                 <Buttons value={'Update'} />
                             </Link>
-                            <TrashIcon class="h-8 w-8 text-primaryBg cursor-pointer" />
+                            <TrashIcon onClick={()=>handler(id)} class="h-8 w-8 text-primaryBg cursor-pointer" />
                         </>
                         :
                         <Link to={`/product-details/${id}`}>

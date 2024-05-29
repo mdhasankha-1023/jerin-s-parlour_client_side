@@ -1,13 +1,6 @@
 {
   "products": [
     {
-      "proName": "Product A",
-      "price": 49.99,
-      "proPicture": "https://vishubeautyparlour.com/blog/blogimages/makeup-product.jpg",
-      "proDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "id": "79c5"
-    },
-    {
       "proName": "Product B",
       "price": 29.99,
       "proPicture": "https://5.imimg.com/data5/PA/LO/MY-599775/natural-skincare-products-500x500.jpg",
@@ -15,7 +8,6 @@
       "id": "f649"
     },
     {
-      
       "proName": "Product C",
       "price": 79.99,
       "proPicture": "https://blog.essentialwholesale.com/static/52c3f2108383f426b5ac0affdfddcd41/8e45b/EssentialWholesaleLabs-166560-Organic-Beauty-Products-blogbanner1.jpg",
@@ -23,7 +15,6 @@
       "id": "4973"
     },
     {
-      
       "proName": "Product D",
       "price": 39.99,
       "proPicture": "https://as2.ftcdn.net/v2/jpg/03/35/08/13/1000_F_335081377_jQazWXeoZnRZUtxtrwW4FG2TZJ1yaqV9.jpg",
@@ -31,7 +22,6 @@
       "id": "bf44"
     },
     {
-      
       "proName": "Product E",
       "price": 59.99,
       "proPicture": "https://vishubeautyparlour.com/blog/blogimages/makeup-things.jpg",
@@ -39,7 +29,6 @@
       "id": "1124"
     },
     {
-      
       "proName": "Product F",
       "price": 19.99,
       "proPicture": "https://t3.ftcdn.net/jpg/04/17/76/28/360_F_417762824_k94tqrBCTFiXeWQJt6mIeF50guiyxZ4X.jpg",
@@ -47,7 +36,6 @@
       "id": "1bc3"
     },
     {
-      
       "proName": "Product G",
       "price": 69.99,
       "proPicture": "https://content.jdmagicbox.com/comp/remote/t2/9999p2141.2141.190511184018.u3t2/catalogue/n-p-ladies-beauty-parlour-neral-raigad-maharashtra-beauty-parlours-b54in43rbc.jpg",
@@ -55,7 +43,6 @@
       "id": "7b6f"
     },
     {
-      
       "proName": "Product H",
       "price": 89.99,
       "proPicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKTL8kOx7KgM6MXXAtSEKFcb_WunbrY4ej5kBAVj_NkciLhYMQbJbvWNdsZYWTbX9sHNY&usqp=CAU",
@@ -63,55 +50,11 @@
       "id": "fa15"
     },
     {
-      
       "proName": "Product I",
       "price": 49.99,
       "proPicture": "https://media.istockphoto.com/id/695177040/photo/woman-shopping-for-beauty-products-at-a-store.jpg?s=612x612&w=0&k=20&c=EowNSCTQdMZEW3fajMXKsB5UPb29GMz-YOLc1oo3D5U=",
       "proDetails": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
       "id": "fa3b"
-    },
-    {
-      
-      "proName": "Product J",
-      "price": 79.99,
-      "proPicture": "https://content.jdmagicbox.com/comp/mumbai/g7/022pxx22.xx22.180514123025.q7g7/catalogue/unique-beauty-parlour-nalasopara-east-mumbai-ladies-beauty-parlours-wfzg8-250.jpg",
-      "proDetails": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "id": "f346"
-    },
-    {
-      "id": "57f3",
-      "name": "",
-      "email": "",
-      "proName": "dfdfd",
-      "price": "45",
-      "proDetails": "fldkfdfkdjfkdjfkdjkfd"
-    },
-    {
-      "id": "63aa",
-      "name": "",
-      "email": "",
-      "proName": "dfdfd",
-      "price": "45",
-      "proDetails": "dfdsffdsfsdsfd",
-      "proPicture": "dfdfdfdfd"
-    },
-    {
-      "id": "bf69",
-      "name": "",
-      "email": "",
-      "proName": "dfdfd",
-      "price": "45",
-      "proDetails": "dfdsffdsfsdsfd",
-      "proPicture": "dfdfdfdfd"
-    },
-    {
-      "id": "7202",
-      "name": "",
-      "email": "",
-      "proName": "dfdfdfd",
-      "price": "544",
-      "proDetails": "dfdsfsds ",
-      "proPicture": "fdfdsf"
     }
   ],
   "comments": [
