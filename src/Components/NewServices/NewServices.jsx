@@ -22,7 +22,7 @@ export default function NewServices() {
     return (
         <div className="w-full xl:w-4/5 mx-auto">
             <PrimaryTitle text1={'Our'} text2={'Services'} style={'text-center'}/>
-            <div className="grid grid-cols-3 gap-x-8 gap-y-12 mx-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-12 mx-8">
                 {
                     products
                         .slice(0, 3)

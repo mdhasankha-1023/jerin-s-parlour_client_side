@@ -13,7 +13,7 @@ export default function Footer() {
 
 
   return (
-    <footer className="footer p-10 bg-primaryBg text-[#FFF]">
+    <footer className="footer justify-center lg:justify-between p-10 bg-primaryBg text-[#FFF]">
       <aside>
         Jerin&rsquo;s parlour
         <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>

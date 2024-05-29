@@ -18,7 +18,7 @@ export default function OurExpertWorkers() {
     return (
         <div className="w-full xl:w-4/5 mx-auto">
             <PrimaryTitle text1={'Get Expert'} text2={'Workers'} style={'text-center'} />
-            <div className="grid grid-cols-3 gap-x-8 gap-y-12 mx-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-12 mx-8">
                 {
                     workers
                         .slice(0, 3)
