@@ -2,6 +2,7 @@ import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SlideCard from "../uI/SlideCard";
 import { useEffect, useState } from "react";
+import PrimaryTitle from "../uI/PrimaryTitle";
 
 export default function Testimonials() {
     const [reviews, setReviews] = useState([]);
@@ -19,6 +20,7 @@ export default function Testimonials() {
 
     return (
         <div className="w-full xl:w-4/5 mx-auto px-4">
+            <PrimaryTitle text1={'Testimonials'} style={'text-center'} />
             <Swiper
                 slidesPerView={3}
                 spaceBetween={60}
