@@ -7,7 +7,7 @@ import { TrashIcon } from "@heroicons/react/16/solid";
 // eslint-disable-next-line react/prop-types
 export default function ServiceCard({ product, type }) {
     // eslint-disable-next-line react/prop-types
-    const { proName, price, proDetails, proPicture } = product;
+    const { proName, price, proDetails, proPicture, id } = product;
     const { user } = Auth();
     console.log(product)
 
@@ -21,7 +21,7 @@ export default function ServiceCard({ product, type }) {
                 <div className="card-actions items-center gap-x-8">
                     {user && type === 'dashBoard' ?
                         <>
-                            <Link to={'/product-details'}>
+                            <Link to={`/product-details/${id}`}>
                                 <Buttons value={'Details'} />
                             </Link>
                             <Link to={'/user-dashBoard/pro-update'}>
@@ -30,7 +30,7 @@ export default function ServiceCard({ product, type }) {
                             <TrashIcon class="h-8 w-8 text-primaryBg cursor-pointer" />
                         </>
                         :
-                        <Link to={'/product-details'}>
+                        <Link to={`/product-details/${id}`}>
                             <Buttons value={'Details'} />
                         </Link>
                     }
