@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "name": "Sophia Nguyen",
+      "pic_url": "https://media.istockphoto.com/id/1398386354/photo/hairdresser-dyeing-clients-hair-at-hair-salon.jpg?s=612x612&w=0&k=20&c=PiwqfTWaWYEAQoZDMxRqL2ziIrduSSK0DYxRgwn2PFw=",
+      "profession": "Hair Stylist",
+      "about": "Sophia is a seasoned hair stylist with over 10 years of experience in creating stunning hairstyles that enhance natural beauty. She specializes in color treatments and precision cuts."
+    },
+    {
+      "id": 2,
+      "name": "Liam Patel",
+      "pic_url": "https://media.istockphoto.com/id/1454150252/photo/a-student-working-as-a-hairdresser-with-a-dummy.webp?b=1&s=170667a&w=0&k=20&c=gay16i1U8DgUcZDoWM-q8-yLSc7k8xq666Ks8hGu0Xw=",
+      "profession": "Massage Therapist",
+      "about": "Liam is a certified massage therapist known for his therapeutic touch and ability to relieve stress and tension. He is skilled in various massage techniques, including Swedish and deep tissue."
+    },
+    {
+      "id": 3,
+      "name": "Olivia Kim",
+      "pic_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKhzFzu-Gsl2PUpxhfEBfT8rBUr835rCMc25KSLTO5pKaQv7p0-_5E9eTdoQ83XzMa4UU&usqp=CAU",
+      "profession": "Esthetician",
+      "about": "Olivia is a dedicated esthetician with a passion for skincare. She offers a range of facial treatments and is an expert in addressing various skin concerns to achieve a radiant complexion."
+    },
+    {
+      "id": 4,
+      "name": "Ethan Davis",
+      "pic_url": "https://img.freepik.com/premium-photo/master-does-hair-styling-beauty-salon-young-woman-preparing-date-high-quality-photo_217333-1663.jpg",
+      "profession": "Nail Technician",
+      "about": "Ethan is a creative nail technician who excels in both classic and contemporary nail art. He is known for his meticulous attention to detail and ability to create beautiful, long-lasting manicures."
+    },
+    {
+      "id": 5,
+      "name": "Ava Thompson",
+      "pic_url": "https://connection.media.clients.ellingtoncms.com/img/photos/2013/05/17/cv0227-644_t670.jpg?b3f6a5d7692ccc373d56e40cf708e3fa67d9af9d",
+      "profession": "Makeup Artist",
+      "about": "Ava is a professional makeup artist with a flair for enhancing natural beauty and creating glamorous looks for special occasions. Her expertise ranges from everyday makeup to bridal and editorial styles."
+    },
+    {
+      "id": 6,
+      "name": "Noah Garcia",
+      "pic_url": "https://static.vecteezy.com/system/resources/previews/032/697/253/large_2x/professional-makeup-expert-working-with-famous-female-model-generate-ai-photo.jpg",
+      "profession": "Barber",
+      "about": "Noah is a master barber with a keen eye for detail and a talent for creating sharp, stylish haircuts. He is skilled in traditional and modern barbering techniques."
+    },
+    {
+      "id": 7,
+      "name": "Mia Robinson",
+      "pic_url": "https://i.pinimg.com/1200x/a1/ae/fe/a1aefe28da8e796fc0f0645eae16a5cb.jpg",
+      "profession": "Hair Colorist",
+      "about": "Mia is a talented hair colorist known for her ability to create stunning color transformations. She stays updated on the latest trends and techniques to provide her clients with vibrant, personalized colors."
+    },
+    {
+      "id": 8,
+      "name": "James Lee",
+      "pic_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMKrC8Q_q_27DacUQ1n2Vh23i_prXx-Nr-OG1CcxR5SPOY0I0kFmrNoKhap9YGRBvBrrU&usqp=CAU",
+      "profession": "Facial Therapist",
+      "about": "James is a skilled facial therapist with a focus on holistic skincare. He combines traditional techniques with modern treatments to rejuvenate and revitalize the skin."
+    },
+    {
+      "id": 9,
+      "name": "Emily White",
+      "pic_url": "https://i0.wp.com/naaree.com/wp-content/uploads/2011/08/Beauty-Salon-And-Spa.jpg?resize=900%2C600",
+      "profession": "Brow Specialist",
+      "about": "Emily is an expert brow specialist who shapes and styles brows to perfection. She is adept at various techniques, including threading, waxing, and tinting, to create the ideal brow shape for each client."
+    },
+    {
+      "id": 10,
+      "name": "Lucas Martinez",
+      "pic_url": "https://www.shutterstock.com/image-photo/cosmetologist-medical-mask-gloves-holds-600nw-1814428673.jpg",
+      "profession": "Body Waxing Specialist",
+      "about": "Lucas is a professional body waxing specialist with a gentle touch and meticulous technique. He ensures a smooth and comfortable waxing experience for all clients."
+    }
+  ]
+  
