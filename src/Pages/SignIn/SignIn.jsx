@@ -7,6 +7,7 @@ import PrimaryTitle from "../../Components/uI/PrimaryTitle";
 export default function SignIn() {
   const { signIn, successMsg, errorMsg, google, github } = Auth();
   const navigate = useNavigate();
+  let from = location.state?.from?.pathname || "/";
 
 
   const handleSubmit = (event) => {
@@ -23,7 +24,7 @@ export default function SignIn() {
         const user = result.user;
         console.log(user)
         successMsg('Sign In successfully')
-        navigate('/')
+        navigate(from, { replace: true })
       })
       .catch(error => errorMsg(error.massage))
 
@@ -37,7 +38,7 @@ export default function SignIn() {
         const user = result.user;
         console.log(user)
         successMsg('Sign up successfully')
-        navigate('/')
+        navigate(from, { replace: true })
       })
       .catch(error => errorMsg(error.massage))
   }
@@ -49,7 +50,7 @@ export default function SignIn() {
         const user = result.user;
         console.log(user)
         successMsg('Sign up successfully')
-        navigate('/')
+        navigate(from, { replace: true })
       })
       .catch(error => errorMsg(error.massage))
   }
