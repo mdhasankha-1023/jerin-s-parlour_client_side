@@ -57,8 +57,8 @@ export default function SignUp() {
 
     return (
         <div className='flex items-center justify-center h-screen'>
-            <div className='shadow-xl py-12 px-8 rounded'>
-                <PrimaryTitle text={'Sign Up'}/>
+            <div className='shadow-xl py-12 px-8 rounded w-1/3'>
+            <PrimaryTitle text1={'Sign'} text2={'Up'} style={'text-center'} />
                 <form onSubmit={handleSubmit} className="card-body w-full p-0">
                     <div className="form-control">
                         <label className="label">
