@@ -30,7 +30,7 @@ export default function Navbar() {
 
   )
   return (
-    <div className="navbar bg-base-100 w-full xl:w-4/5 mx-auto">
+    <div className="navbar bg-secondaryBg w-full xl:w-4/5 mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

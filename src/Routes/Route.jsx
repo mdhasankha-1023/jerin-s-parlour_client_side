@@ -16,11 +16,13 @@ import UserInfo from "../Pages/DashBoardPages/UserInfo";
 import ContactUs from "../Pages/NormalUserPages/ContactUs";
 import About from "../Pages/NormalUserPages/About";
 import OurTeams from "../Pages/NormalUserPages/OurTeams";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayouts />,
+    errorElement: <ErrorPage/>,
     children: [
       {
         path: '/',
