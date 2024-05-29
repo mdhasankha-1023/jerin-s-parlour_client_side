@@ -3,7 +3,7 @@ import Buttons from "./Buttons";
 import Auth from "../../Contexts/Auth";
 
 // eslint-disable-next-line react/prop-types
-export default function ProductCard({ product }) {
+export default function ServiceCard({ product, type }) {
     // eslint-disable-next-line react/prop-types
     const { proName, price, proDetails, proPicture } = product;
     const { user } = Auth();
@@ -17,7 +17,7 @@ export default function ProductCard({ product }) {
                 <p>{proDetails}</p>
                 <p>{price}</p>
                 <div className="card-actions">
-                    {user ?
+                    {user && type === 'dashBoard'?
                         <>
                             <Link to={'/product-details'}>
                                 <Buttons value={'Details'} />

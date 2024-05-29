@@ -2,7 +2,7 @@ import Buttons from "../../Components/uI/Buttons";
 import PrimaryTitle from "../../Components/uI/PrimaryTitle";
 import Auth from "../../Contexts/Auth";
 
-export default function AddProducts() {
+export default function AddService() {
     const { user, successMsg, errorMsg } = Auth()
 
     const handleSubmit = (event) => {

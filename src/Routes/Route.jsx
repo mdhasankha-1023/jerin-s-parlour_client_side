@@ -8,8 +8,8 @@ import DashBoardLayout from "../Layouts/DashBoardLayout/DashBoardLayout";
 import Main from "../Pages/Main/Main";
 import Services from "../Pages/NormalUserPages/Services";
 import ProductDetails from "../Pages/NormalUserPages/ProductDetails";
-import AddProducts from "../Pages/DashBoardPages/AddProducts";
-import AllProducts from "../Pages/DashBoardPages/AllProducts";
+import AddService from "../Pages/DashBoardPages/AddService";
+import ManageServices from "../Pages/DashBoardPages/ManageServices";
 import UpdateProducts from "../Pages/DashBoardPages/UpdateProducts";
 import PrivetRoute from "./PrivetRoute";
 import UserInfo from "../Pages/DashBoardPages/UserInfo";
@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
         element: <About/>
       },
       {
-        path: '/our-team',
+        path: '/our-teams',
         element: <OurTeams/>
       },
 
@@ -58,15 +58,15 @@ export const router = createBrowserRouter([
     </PrivetRoute>,
     children: [
       {
-        path: '/user-dashBoard/add-product',
+        path: '/user-dashBoard/add-service',
         element: <PrivetRoute>
-          <AddProducts />
+          <AddService />
         </PrivetRoute>
       },
       {
-        path: '/user-dashBoard/all-products',
+        path: '/user-dashBoard/manage-services',
         element: <PrivetRoute>
-          <AllProducts />
+          <ManageServices />
         </PrivetRoute>
       },
       {

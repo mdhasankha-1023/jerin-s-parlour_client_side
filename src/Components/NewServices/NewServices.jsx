@@ -1,10 +1,10 @@
 import { useEffect } from "react"
 import { useState } from "react"
-import ProductCard from "../uI/ProductCard"
+import ServiceCard from "../uI/ServiceCard"
 import Buttons from "../uI/Buttons"
 import { Link } from "react-router-dom"
 
-export default function NewProducts() {
+export default function NewServices() {
     const [products, setProducts] = useState([])
 
     console.log(products)
@@ -25,7 +25,7 @@ export default function NewProducts() {
                 {
                     products
                         .slice(0, 6)
-                        .map(product => <ProductCard key={product.id} product={product} />)
+                        .map(product => <ServiceCard key={product.id} product={product} />)
                 }
             </div>
             <div className="text-center my-16">

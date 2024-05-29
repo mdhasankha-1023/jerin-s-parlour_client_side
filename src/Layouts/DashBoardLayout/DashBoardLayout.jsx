@@ -10,16 +10,18 @@ export default function DashBoardLayout() {
     const dashBoardLink = (
         <>
             <li><Link to={'/user-dashBoard/user-info'}>User Info</Link></li>
-            <li><Link to={'/user-dashBoard/all-products'}>All Products</Link></li>
-            <li><Link to={'/user-dashBoard/add-product'}>Add Product</Link></li>
+            <li><Link to={'/user-dashBoard/manage-services'}>Manage</Link></li>
+            <li><Link to={'/user-dashBoard/add-service'}>Add Service</Link></li>
         </>
     )
 
     const navLink = (
         <>
             <li><Link to={'/'}>Home</Link></li>
-            <li><Link>Our teme</Link></li>
-            <li><Link>Contact us</Link></li>
+            <li><Link to={'/services'}>Services</Link></li>
+            <li><Link to={'/our-teams'}>Our teams</Link></li>
+            <li><Link to={'/contact-us'}>Contact us</Link></li>
+            <li><Link to={'/about'}>About</Link></li>
         </>
 
     )
@@ -32,7 +34,7 @@ export default function DashBoardLayout() {
                 {/* Page content here */}
                 {/* <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button">
                 </label> */}
-                    <Outlet />
+                <Outlet />
 
             </div>
 

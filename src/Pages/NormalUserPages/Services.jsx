@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import ProductCard from "../../Components/uI/ProductCard"
+import ServiceCard from "../../Components/uI/ServiceCard"
 
 export default function Services() {
   const [products, setProducts] = useState([])
@@ -20,7 +20,7 @@ export default function Services() {
       <div className="grid grid-cols-3 gap-x-8 gap-y-12 mx-8">
         {
           products
-            .map(product => <ProductCard key={product.id} product={product} />)
+            .map(product => <ServiceCard key={product.id} product={product} />)
         }
       </div>
     </div>
