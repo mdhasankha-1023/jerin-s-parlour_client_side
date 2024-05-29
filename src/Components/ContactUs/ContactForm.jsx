@@ -3,7 +3,7 @@ import PrimaryTitle from "../uI/PrimaryTitle";
 
 export default function ContactForm() {
   return (
-    <div className="xl:w-4/5 mx-auto my-20 bg-secondaryBg">
+    <div className="xl:w-4/5 mx-auto my-20">
       <PrimaryTitle text1={'Contact'} text2={'Us'} style={'text-center'} />
       <div className='px-8 rounded w-4/5 mx-auto'>
         <PrimaryTitle text={'Add Product'} />
