@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Buttons from "./Buttons";
 import Auth from "../../Contexts/Auth";
+import { TrashIcon } from "@heroicons/react/16/solid";
+
 
 // eslint-disable-next-line react/prop-types
 export default function ServiceCard({ product, type }) {
@@ -11,13 +13,13 @@ export default function ServiceCard({ product, type }) {
 
     return (
         <div className="card w-full bg-base-100 shadow-xl">
-            <figure className="h-1/2"><img className="w-full h-full" src={proPicture} alt="Shoes" /></figure>
-            <div className="card-body">
+            <figure className="h-2/5"><img className="w-full h-full" src={proPicture} alt="Shoes" /></figure>
+            <div className="card-body items-center gap-y-0 px-2 py-4 h-3/5">
                 <h2 className="card-title">{proName}</h2>
-                <p>{proDetails}</p>
-                <p>{price}</p>
-                <div className="card-actions">
-                    {user && type === 'dashBoard'?
+                <p className="text-primaryBg font-bold">${price}</p>
+                <p className="text-center">{proDetails}</p>
+                <div className="card-actions items-center gap-x-8">
+                    {user && type === 'dashBoard' ?
                         <>
                             <Link to={'/product-details'}>
                                 <Buttons value={'Details'} />
@@ -25,7 +27,7 @@ export default function ServiceCard({ product, type }) {
                             <Link to={'/user-dashBoard/pro-update'}>
                                 <Buttons value={'Update'} />
                             </Link>
-                            <Buttons value={'Remove'} />
+                            <TrashIcon class="h-8 w-8 text-primaryBg cursor-pointer" />
                         </>
                         :
                         <Link to={'/product-details'}>
