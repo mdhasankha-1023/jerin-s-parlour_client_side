@@ -1,9 +1,11 @@
+import { useLoaderData } from "react-router-dom";
 import Buttons from "../../Components/uI/Buttons";
 import PrimaryTitle from "../../Components/uI/PrimaryTitle";
 import Auth from "../../Contexts/Auth";
 
 export default function UpdateProducts() {
-    const { user, successMsg, errorMsg } = Auth()
+    const { user, successMsg, errorMsg } = Auth();
+    const service = useLoaderData();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -17,7 +19,7 @@ export default function UpdateProducts() {
         const info = { name, email, proName, price, proDetails, proPicture }
         console.log(info)
 
-        fetch('http://localhost:3000/products', {
+        fetch(`http://localhost:3000/products/${service.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-type': 'application/json'
@@ -33,10 +35,11 @@ export default function UpdateProducts() {
             .catch(error => errorMsg(error.massage))
 
     }
+
     return (
         <div className="">
             <div className='shadow-xl py-12 px-8 rounded'>
-                <PrimaryTitle text={'Update Product'} />
+                <PrimaryTitle text1={'Update Your'} text2={'Service'} style={'text-center'} />
                 <form onSubmit={handleSubmit} className="card-body">
                     {/* 1st input row */}
                     <div className="flex justify-center items-center gap-4">
@@ -73,7 +76,9 @@ export default function UpdateProducts() {
                             </label>
                             <input type="text" placeholder="Product name"
                                 name={'proName'}
-                                className="input input-bordered" required />
+                                className="input input-bordered"
+                                defaultValue={service.proName}
+                                required />
 
                         </div>
                         {/* 4th  input */}
@@ -83,7 +88,10 @@ export default function UpdateProducts() {
                             </label>
                             <input type="number" placeholder="00"
                                 name={'price'}
-                                className="input input-bordered" required />
+                                className="input 
+                                input-bordered"
+                                defaultValue={service.price}
+                                required />
 
                         </div>
                     </div>
@@ -95,15 +103,19 @@ export default function UpdateProducts() {
                             </label>
                             <input type="text" placeholder="Picture Link"
                                 name={'proPicture'}
-                                className="input input-bordered" required />
+                                className="input input-bordered" 
+                                defaultValue={service.proPicture}
+                                required />
 
                         </div>
                     </div>
                     {/* 4th row */}
-                    <div className="w-full">
+                    <div className="w-full mt-4">
                         <textarea placeholder="Write Product Details..."
                             name="proDetails"
-                            className="textarea textarea-bordered textarea-lg w-full" ></textarea>
+                            className="textarea textarea-bordered textarea-lg w-full"
+                            defaultValue={service.proDetails}
+                            required></textarea>
                     </div>
                     {/* button */}
                     <div className="form-control mt-6">

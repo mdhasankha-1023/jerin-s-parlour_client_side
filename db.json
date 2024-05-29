@@ -1,11 +1,13 @@
 {
   "products": [
     {
-      "proName": "Product B",
-      "price": 29.99,
+      "proName": "Naturale salon",
+      "price": "39.99",
       "proPicture": "https://5.imimg.com/data5/PA/LO/MY-599775/natural-skincare-products-500x500.jpg",
-      "proDetails": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "id": "f649"
+      "proDetails": "The service venue offers a peaceful and fitting environment in which to celebrate the life of your loved one among family and friends. Once the ceremony is over, the cremation takes place without mourners, carried out with the utmost care and supervised by an experienced attendant.",
+      "id": "f649",
+      "name": "",
+      "email": "mdhasankha.wd@gmail.com"
     },
     {
       "proName": "Product C",
@@ -55,6 +57,15 @@
       "proPicture": "https://media.istockphoto.com/id/695177040/photo/woman-shopping-for-beauty-products-at-a-store.jpg?s=612x612&w=0&k=20&c=EowNSCTQdMZEW3fajMXKsB5UPb29GMz-YOLc1oo3D5U=",
       "proDetails": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
       "id": "fa3b"
+    },
+    {
+      "id": "50a2",
+      "name": "",
+      "email": "mdhasankha.wd@gmail.com",
+      "proName": "Beauteous Blis",
+      "price": "495",
+      "proDetails": "The service venue offers a peaceful and fitting environment in which to celebrate the life of your loved one among family and friends. Once the ceremony is over, the cremation takes place without mourners, carried out with the utmost care and supervised by an experienced attendan",
+      "proPicture": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmVhdXR5JTIwc2Fsb258ZW58MHx8MHx8fDA%3D"
     }
   ],
   "comments": [

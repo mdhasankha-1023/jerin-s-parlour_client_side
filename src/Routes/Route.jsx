@@ -72,10 +72,11 @@ export const router = createBrowserRouter([
         loader: () => fetch('http://localhost:3000/products')
       },
       {
-        path: '/user-dashBoard/pro-update',
+        path: '/user-dashBoard/pro-update/:id',
         element: <PrivetRoute>
           <UpdateProducts />
-        </PrivetRoute>
+        </PrivetRoute>,
+        loader: ({params}) => fetch(`http://localhost:3000/products/${params.id}`)
       },
       {
         path: '/user-dashBoard/user-info',

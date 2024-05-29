@@ -24,7 +24,7 @@ export default function ServiceCard({ product, type, handler }) {
                             <Link to={`/product-details/${id}`}>
                                 <Buttons value={'Details'} />
                             </Link>
-                            <Link to={'/user-dashBoard/pro-update'}>
+                            <Link to={`/user-dashBoard/pro-update/${id}`}>
                                 <Buttons value={'Update'} />
                             </Link>
                             <TrashIcon onClick={()=>handler(id)} class="h-8 w-8 text-primaryBg cursor-pointer" />
