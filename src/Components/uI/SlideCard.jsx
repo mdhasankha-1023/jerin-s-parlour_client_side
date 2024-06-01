@@ -4,7 +4,7 @@ import Ratings from "./Ratings";
 export default function SlideCard({review}) {
     // eslint-disable-next-line react/prop-types
     const {userName, userPic, profession, reviewText, rating} = review;
-    console.log(review)
+    // console.log(review)
 
 
 

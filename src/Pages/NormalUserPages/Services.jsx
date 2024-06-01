@@ -8,7 +8,7 @@ export default function Services() {
   console.log(products)
   // fetch data
   useEffect(() => {
-    fetch('http://localhost:3000/products')
+    fetch('http://localhost:5000/services')
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(error => console.log(error.massage))
@@ -21,7 +21,7 @@ export default function Services() {
       <div className="grid grid-cols-3 gap-x-8 gap-y-12 mx-8 my-20">
         {
           products
-            .map(product => <ServiceCard key={product.id} product={product} />)
+            .map(product => <ServiceCard key={product._id} product={product} />)
         }
       </div>
     </div>

@@ -7,7 +7,7 @@ import Buttons from "../uI/Buttons"
 export default function OurExpertWorkers() {
     const [workers, setWorkers] = useState([])
 
-    console.log(workers)
+    // console.log(workers)
     // fetch data
     useEffect(() => {
         fetch('/ExpertWorkers.json')

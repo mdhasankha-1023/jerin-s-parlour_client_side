@@ -1,7 +1,7 @@
 
 // eslint-disable-next-line react/prop-types
 export default function WorkerInfoCard({workerInfo}) {
-    console.log(workerInfo)
+    // console.log(workerInfo)
     // eslint-disable-next-line react/prop-types
     const {name, pic_url, about, profession} = workerInfo;
 
