@@ -12,7 +12,7 @@ export default function Testimonials() {
         fetch('/fackReview.json')
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 setReviews(data)
             })
     }, [])
@@ -33,14 +33,12 @@ export default function Testimonials() {
             >
 
                 {
-                    reviews.map(review =>
-                        <>
-                            <SwiperSlide className="mb-20">
-                                <SlideCard key={review.id}
+                    reviews.map(review => <SwiperSlide key={review.id} className="mb-20">
+                                <SlideCard
                                     review={review}
                                 />
                             </SwiperSlide>
-                        </>
+                        
                     )
                 }
 

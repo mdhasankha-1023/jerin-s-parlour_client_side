@@ -8,17 +8,17 @@ import PrimaryTitle from "../uI/PrimaryTitle"
 export default function NewServices() {
     const [products, setProducts] = useState([])
 
-    console.log(products)
+    // console.log(products)
     // fetch data
     useEffect(() => {
-        fetch('http://localhost:3000/products')
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setProducts(data))
             .catch(error => console.log(error.massage))
     }, [])
 
 
-    console.log(products)
+    // console.log(products)
     return (
         <div className="w-full xl:w-4/5 mx-auto">
             <PrimaryTitle text1={'Our'} text2={'Services'} style={'text-center'}/>
@@ -26,7 +26,7 @@ export default function NewServices() {
                 {
                     products
                         .slice(0, 3)
-                        .map(product => <ServiceCard key={product.id} product={product} />)
+                        .map(product => <ServiceCard key={product._id} product={product} />)
                 }
             </div>
             <div className="text-center my-16">
