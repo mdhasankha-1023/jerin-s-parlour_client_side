@@ -1,11 +1,22 @@
-import { Link, Outlet } from "react-router-dom"
+import { Link, Outlet, useNavigate } from "react-router-dom"
 import UserAvater from "../../Components/uI/UserAvater"
 import Auth from "../../Contexts/Auth"
+import Buttons from "../../Components/uI/Buttons";
 
 export default function DashBoardLayout() {
-    const { user } = Auth();
+    const { user, logOut, successMsg, errorMsg } = Auth();
+    let from = location.state?.from?.pathname || "/";
+    const navigate = useNavigate();
 
-    console.log(user)
+    const handleLogOutBtn = () => {
+        logOut()
+            .then(res => {
+                console.log(res)
+                successMsg('Sign out successfully')
+                navigate(from, { replace: true })
+            })
+            .catch(error => errorMsg(error.massage))
+    }
 
     const dashBoardLink = (
         <>
@@ -47,6 +58,9 @@ export default function DashBoardLayout() {
                     {dashBoardLink}
                     <div className="divider"></div>
                     {navLink}
+                    <div className="mt-4">
+                        <Buttons handler={handleLogOutBtn} value={'Sing out'} />
+                    </div>
                 </ul>
 
             </div>

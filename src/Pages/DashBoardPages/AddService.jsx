@@ -28,7 +28,7 @@ export default function AddService() {
             confirmButtonText: "Yes, add it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch('http://localhost:3000/products', {
+                fetch('http://localhost:5000/services', {
                     method: 'POST',
                     headers: {
                         'Content-type': 'application/json'

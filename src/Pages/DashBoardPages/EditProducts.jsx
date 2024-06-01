@@ -30,7 +30,7 @@ export default function EditProducts() {
             confirmButtonText: "Yes, update it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:3000/products/${service.id}`, {
+                fetch(`http://localhost:5000/services/${service._id}`, {
                     method: 'PATCH',
                     headers: {
                         'Content-type': 'application/json'

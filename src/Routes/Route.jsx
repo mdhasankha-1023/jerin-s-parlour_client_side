@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
       {
         path: '/product-details/:id',
         element: <ProductDetails />,
-        loader: ({params}) => fetch(`http://localhost:3000/products/${params.id}`)
+        loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
       },
       {
         path: '/contact-us',
@@ -71,14 +71,14 @@ export const router = createBrowserRouter([
         element: <PrivetRoute>
           <ManageServices />
         </PrivetRoute>,
-        loader: () => fetch('http://localhost:3000/products')
+        loader: () => fetch('http://localhost:5000/services')
       },
       {
         path: '/user-dashBoard/pro-update/:id',
         element: <PrivetRoute>
           <EditProducts />
         </PrivetRoute>,
-        loader: ({params}) => fetch(`http://localhost:3000/products/${params.id}`)
+        loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
       },
       {
         path: '/user-dashBoard/user-info',

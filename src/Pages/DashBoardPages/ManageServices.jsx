@@ -24,7 +24,7 @@ export default function ManageServices() {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/products/${id}`, {
+        fetch(`http://localhost:5000/services/${id}`, {
           method: 'DELETE'
         })
           .then(res => res.json())
@@ -48,7 +48,7 @@ export default function ManageServices() {
       <div className="grid grid-cols-2 gap-x-8 gap-y-12 mx-8 my-20">
         {
           products
-            .map(product => <ServiceCard key={product.id} product={product}
+            .map(product => <ServiceCard key={product._id} product={product}
               handler={removeBtn}
               type={'dashBoard'}
             />)

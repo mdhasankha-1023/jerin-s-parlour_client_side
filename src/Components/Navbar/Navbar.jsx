@@ -8,14 +8,14 @@ export default function Navbar() {
   const navigate = useNavigate()
 
 
-  const handleLogOutBtn = () =>{
+  const handleLogOutBtn = () => {
     logOut()
-    .then(res => {
-      console.log(res)
-      successMsg('Sign out successfully')
-      navigate('/signIn')
-    })
-    .catch(error => errorMsg(error.massage))
+      .then(res => {
+        console.log(res)
+        successMsg('Sign out successfully')
+        navigate('/signIn')
+      })
+      .catch(error => errorMsg(error.massage))
   }
 
   const navLink = (
@@ -60,8 +60,10 @@ export default function Navbar() {
         {user ? <Buttons handler={handleLogOutBtn} value={'Sing out'} />
           :
           <>
-            <Buttons value={'Sign in'} />
-            <Buttons value={'Sign up'} />
+            <Link to={'/signIn'}><Buttons value={'Sign in'}></Buttons></Link>
+
+            <Link to={'/signUp'}><Buttons value={'Sign up'}></Buttons></Link>
+
           </>}
 
       </div>
