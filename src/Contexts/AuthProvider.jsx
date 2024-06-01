@@ -18,9 +18,9 @@ import Swal from "sweetalert2";
   //success msg 
   const successMsg = (text) => {
     Swal.fire({
-      position: "top-center",
+      position: "center",
       icon: "success",
-      title: {text},
+      title: `${text}`,
       showConfirmButton: false,
       timer: 1500
     });
@@ -29,9 +29,9 @@ import Swal from "sweetalert2";
   //error msg 
   const errorMsg = (text) => {
     Swal.fire({
-      position: "top-center",
+      position: "center",
       icon: "error",
-      title: {text},
+      title: `${text}`,
       showConfirmButton: false,
       timer: 1500
     });
